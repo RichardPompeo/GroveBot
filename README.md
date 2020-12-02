@@ -23,27 +23,16 @@ And more.
 To start this project, I will pass all the dependencies that we will use:
 
 [Lavalink](https://github.com/Frederikam/Lavalink)
-
-[erela.js](https://www.npmjs.com/package/erela.js)
-
-[erela.js-spotify](https://www.npmjs.com/package/erela.js-spotify)
-
-[discord.js](https://www.npmjs.com/package/discord.js)
-
 [ascii-table](https://www.npmjs.com/package/ascii-table)
-
 [byte-size](https://www.npmjs.com/package/byte-size)
-
-[common-tags](https://www.npmjs.com/package/common-tags)
-
+[discord.js](https://www.npmjs.com/package/discord.js)
+[erela.js](https://www.npmjs.com/package/erela.js)
+[erela.js-spotify](https://www.npmjs.com/package/erela.js-spotify)
+[figlet](https://www.npmjs.com/package/figlet)
+[fs](https://www.npmjs.com/package/fs)
 [glob](https://www.npmjs.com/package/glob)
-
 [lyrics-finder](https://www.npmjs.com/package/lyrics-finder)
-
-[moment](https://www.npmjs.com/package/moment)
-
-[moment-duration-format](https://www.npmjs.com/package/moment-duration-format)
-
+[music-progress-bar](https://www.npmjs.com/package/music-progress-bar)
 [os](https://www.npmjs.com/package/os)
 
 If you want to know why we use this, just read the descriptions of the NPM listed!
