@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
+const bot = new Discord.Client({ disableMentions: "everyone" })
 const fs = require('fs')
 const { Manager } = require('erela.js')
 const Spotify = require('erela.js-spotify')
