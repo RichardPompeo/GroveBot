@@ -1,0 +1,13 @@
+{
+  "token": "Your Bot Token",
+  "prefix": "Your Bot Prefix",
+  "clientID": "Your Spotify Client ID",
+  "clientSecret": "Your Spotify Client Secret",
+  "host": "Your host name",
+  "password": "Your host password",
+  "identifier": "Your host identifier",
+  "hook": {
+    "id": "Your Webhook ID",
+    "token": "Your Webhook Token"
+  }
+}
