@@ -129,4 +129,5 @@ After that, you will see something like this:
 ```
 
 And done! Your Lavalink server is running!
+Source by [BONEE4](https://github.com/BONEE4)
 If necessary, contact `patek#0001`
