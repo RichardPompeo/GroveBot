@@ -39,7 +39,10 @@ module.exports.run = async (bot, message) => {
       { name: 'NightCore', value: player.nightcore ? 'Ativado': 'Desativado', inline: true },
       { name: 'VaporWave', value: player.vaporwave ? 'Ativado': 'Desativado', inline: true },
       { name: '\u200b', value: '\u200b', inline: true },
-      { name: 'Speed', value: player.speed, inline: false }
+      { name: 'Loop Song', value: player.trackRepeat ? 'Ativado' : 'Desativado', inline: true },
+      { name: 'Loop Queue', value: player.queueRepeat ? 'Ativado' : 'Desativado', inline: true },
+      { name: '\u200b', value: '\u200b', inline: true },
+      { name: 'Velocidade', value: player.speed, inline: false }
     )
   return message.channel.send(embed)
 }

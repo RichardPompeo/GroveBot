@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new MessageEmbed()
       .setColor(color)
       .setTitle(messages.messages.incorrectUse)
-      .setDescription(`${prefix}${messages.messages.noSearch}`)
+      .setDescription(`${prefix}${messages.messages.noSearchResults}`)
     return message.channel.send(embed)
   }
 
@@ -104,6 +104,7 @@ module.exports.run = async (bot, message, args) => {
       const index = Number(first) - 1
       const track = res.tracks[index]
       await player.queue.add(track)
+      await msg.delete()
 
       if (!player.playing && !player.paused && !player.queue.length) player.play()
       let embed2 = new MessageEmbed()
