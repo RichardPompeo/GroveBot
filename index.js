@@ -124,7 +124,6 @@ bot.manager = new Manager({
 
 bot.once('ready', () => {
   bot.manager.init(bot.user.id)
-  bot.user.setStatus('dnd')
 })
 
 bot.on('raw', d => {

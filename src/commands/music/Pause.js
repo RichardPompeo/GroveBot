@@ -30,10 +30,10 @@ module.exports.run = (bot, message) => {
 
   if (player.paused) {
     player.pause(false)
-    return message.react('⏸️')
+    return message.react('▶️')
   } else if (!player.paused) {
     player.pause(true)
-    return message.react('▶️')
+    return message.react('⏸️')
   }
 }
 

@@ -5,7 +5,7 @@ const messages = require('../../build/json/Messages.json')
 
 module.exports.run = (bot, message) => {
   const player = message.client.manager.players.get(message.guild.id)
-  const color = message.guild.me.roles.highest.color
+  const color = message.guild.me.displayColor()
 
   if (!player) {
     let embed = new MessageEmbed()
@@ -19,12 +19,12 @@ module.exports.run = (bot, message) => {
   const progressBar = porgressBar({
     currentPositon: player.position > 0 ? player.position : "1",
     endPositon: duration, 
-    width: 15, 
+    width: 12, 
     barStyle: "▬",
-    currentStyle: player.playing ? "▶️" : "⏸️"
+    currentStyle: "🔘"
   },
     {
-      format: " **[ <bar> ]** "
+      format: " **  <bar>  ** "
     })
 
   let embed = new MessageEmbed()
@@ -32,7 +32,7 @@ module.exports.run = (bot, message) => {
     .setAuthor(author, message.author.avatarURL({ dynamic: true }))
     .setTitle(title)
     .setURL(uri)
-    .setDescription(`${progressBar} \`${player.position <= 60000 ? `${time2(player.position)}s` : time2(player.position)} / ${time2(duration)}\``)
+    .setDescription(`${player.playing ? "▶️" : "⏸️"}  ${progressBar}  \`[${player.position <= 60000 ? `${time2(player.position)}s` : time2(player.position)}/${time2(duration)}]\``)
   return message.channel.send(embed)
 }
 

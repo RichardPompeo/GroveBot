@@ -42,6 +42,7 @@ module.exports.run = async (bot, message) => {
       { name: 'Loop Song', value: player.trackRepeat ? 'Ativado' : 'Desativado', inline: true },
       { name: 'Loop Queue', value: player.queueRepeat ? 'Ativado' : 'Desativado', inline: true },
       { name: '\u200b', value: '\u200b', inline: true },
+      { name: 'Volume', value: player.volume, inline: false },
       { name: 'Velocidade', value: player.speed, inline: false }
     )
   return message.channel.send(embed)
