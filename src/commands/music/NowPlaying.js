@@ -5,7 +5,7 @@ const messages = require('../../build/json/Messages.json')
 
 module.exports.run = (bot, message) => {
   const player = message.client.manager.players.get(message.guild.id)
-  const color = message.guild.me.displayColor()
+  const color = message.guild.me.roles.highest.color
 
   if (!player) {
     let embed = new MessageEmbed()
