@@ -1,5 +1,4 @@
 const { bot } = require("../../index");
-const { MessageEmbed } = require("discord.js")
 
 bot.on('voiceStateUpdate', async (oldState, newState) => {
   const player = bot.manager.players.get(newState.guild.id)
