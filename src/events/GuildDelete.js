@@ -1,4 +1,5 @@
 const { bot } = require('../../index')
+const config = require ('../build/json/Config.json')
 
 bot.on('guildDelete', async () => {
   let servidores = await bot.shard.fetchClientValues('guilds.cache.size')
