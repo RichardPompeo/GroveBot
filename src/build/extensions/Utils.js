@@ -69,6 +69,6 @@ Utils.bytes = function (size) {
   return (byteSize(size))
 }
 
-Utils.eval = ["389866221295763456"]
+Utils.eval = ["389866221295763456", "449240801520779266"]
 
 module.exports = Utils

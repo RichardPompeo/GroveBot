@@ -7,12 +7,14 @@ module.exports.run = async (bot, message, args) => {
   const player = message.client.manager.players.get(message.guild.id)
   const color = message.guild.me.roles.highest.color
 
-  if (!utils.eval.includes(message.author.id)) return
+  if (!utils.eval.includes(message.author.id)) return;
 
   try {
-    if (!args.join(' ')) return
+    if (!args.join(' ')) return 
+    if (args.join(' ').toLowerCase().includes('token')) return;
 
     let code = await eval(args.join(' '))
+
     if (typeof code != 'string') {
       code = await require('util').inspect(code, { depth: 0 })
     }
