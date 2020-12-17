@@ -13,7 +13,7 @@ module.exports.run = async (bot, message) => {
     .setColor(message.guild.me.roles.highest.color)
     .setTitle('Informações')
     .addFields(
-      { name: 'Equipe', value: `<@389866221295763456>, <@449240801520779266> e <@599563864509513739>`, inline: false },
+      { name: 'Equipe', value: `<@389866221295763456>, <@449240801520779266> e <@401737879719772180>`, inline: false },
       { name: "Me adicione", value: `[Clique aqui](https://discord.com/oauth2/authorize?client_id=712785958231080990&scope=bot&permissions=8)`, inline: true },
       { name: "Servidor de suporte", value: '[Clique aqui](https://discord.gg/wDPvreyZTU)', inline: true },
       { name: '\u200b', value: '\u200b', inline: true },
