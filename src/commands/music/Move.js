@@ -40,14 +40,14 @@ module.exports.run = (bot, message, args) => {
   if (isNaN(args[0]) || isNaN(args[1])) {
     let embed = new MessageEmbed()
       .setColor(color)
-      .setDescription(`${prefix}${messages.messages.isnanMove}`)
+      .setDescription(`${messages.messages.isnanMove}`)
     return message.channel.send(embed)
   }
 
   if (args[0] > player.queue.length || args[0] <= 0 || args[1] > player.queue.length || args[1] <= 0) {
     let embed = new MessageEmbed()
       .setColor(color)
-      .setDescription(`${prefix}${messages.messages.invalidMove}`)
+      .setDescription(`${messages.messages.invalidMove}`)
     return message.channel.send(embed)
   }
 
