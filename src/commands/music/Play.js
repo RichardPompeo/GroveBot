@@ -91,8 +91,9 @@ module.exports.run = async (bot, message, args) => {
       if (!player.playing && !player.paused && player.queue.size + 1 === res.tracks.length) player.play();
       let embed3 = new MessageEmbed()
         .setColor(color)
-        .setDescription(messages.messages.queued + ' ' + `[${res.playlist.name}](${res.tracks[0].uri}) \`[${res.tracks.length} músicas]\``)
-      return message.channel.send(embed3)
+        .setDescription(messages.messages.queued + ' ' + `**[${res.playlist.name}](${res.tracks[0].uri})** \`[${res.tracks.length} músicas]\``)
+      if (player.queue.length >= res.tracks.length) message.channel.send(embed3)
+      return;
 
     case 'SEARCH_RESULT':
       await player.queue.add(res.tracks[0])

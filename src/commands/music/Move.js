@@ -53,7 +53,7 @@ module.exports.run = (bot, message, args) => {
 
   let embed = new MessageEmbed()
     .setColor(color)
-    .setDescription(messages.messages.moved + ' ' + `[${player.queue[args[0] - 1].title}](${player.queue[args[0] - 1].uri})` + ' ' + messages.messages.to + ' ' + args[1] + '.')
+    .setDescription(messages.messages.moved + ' ' + `**[${player.queue[args[0] - 1].title}](${player.queue[args[0] - 1].uri})**` + ' ' + messages.messages.to + ' ' + args[1] + '.')
 
   const element = player.queue[args[0] - 1]
   player.queue.splice(args[0] - 1, 1)
